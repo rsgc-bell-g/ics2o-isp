@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pql-Xe-7by">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="06A-bE-yKT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -40,67 +40,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cKa-IW-NsX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-706" y="-152"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="8uY-VG-LKc">
-            <objects>
-                <viewController id="pql-Xe-7by" customClass="ViewController" customModule="Wishlist_test" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="D9r-tO-w01"/>
-                        <viewControllerLayoutGuide type="bottom" id="yjA-Fg-FGz"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="qaT-tn-26s">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DXt-8a-glD">
-                                <rect key="frame" x="16" y="76" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Meal name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZxU-1a-mnl">
-                                <rect key="frame" x="16" y="47" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tmb-7l-Wuh">
-                                <rect key="frame" x="16" y="114" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Set default Label Text"/>
-                                <connections>
-                                    <action selector="setDefaultLabelText:" destination="pql-Xe-7by" eventType="touchUpInside" id="V21-sS-pG7"/>
-                                </connections>
-                            </button>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default photo" translatesAutoresizingMaskIntoConstraints="NO" id="erj-SF-GTY">
-                                <rect key="frame" x="16" y="152" width="240" height="241"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Wc9-dx-oFj" appends="YES" id="mrn-V9-h9f"/>
-                                </connections>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="mealNameLabel" destination="ZxU-1a-mnl" id="Bmo-x3-ReD"/>
-                        <outlet property="nameTextField" destination="DXt-8a-glD" id="v6b-kq-ab0"/>
-                        <outlet property="photoImageView" destination="erj-SF-GTY" id="toA-5E-RNK"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rZb-gk-cbv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Wc9-dx-oFj">
-                    <connections>
-                        <action selector="selectImageFromPhotoLibrary:" destination="pql-Xe-7by" id="Xip-7O-3ix"/>
-                    </connections>
-                </tapGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="-402.39999999999998" y="551.87406296851577"/>
+            <point key="canvasLocation" x="-862" y="-152"/>
         </scene>
         <!--Page #2 / Create Wish-->
         <scene sceneID="Bz8-Kx-fPM">
@@ -121,14 +61,14 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default photo" translatesAutoresizingMaskIntoConstraints="NO" id="mis-Vu-5nP" userLabel="User Image">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default photo" translatesAutoresizingMaskIntoConstraints="NO" id="mis-Vu-5nP" userLabel="User Image">
                                 <rect key="frame" x="66" y="100" width="243" height="243"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mis-Vu-5nP" secondAttribute="height" multiplier="1:1" id="DZD-Ox-uYf"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="qRC-EZ-uvk" appends="YES" id="Gd0-47-3Y2"/>
+                                    <outletCollection property="gestureRecognizers" destination="N9M-W1-Hyi" appends="YES" id="A8p-OG-hkU"/>
                                 </connections>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aqM-ge-jHC" userLabel="Info stack">
@@ -171,14 +111,14 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bqm-GJ-UZe" userLabel="Enter link stack">
                                         <rect key="frame" x="0.0" y="60" width="181.5" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Link:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLq-ju-brl">
-                                                <rect key="frame" x="0.0" y="0.0" width="36.5" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Site" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLq-ju-brl">
+                                                <rect key="frame" x="0.0" y="0.0" width="29.5" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Link Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gnQ-Ci-22L">
-                                                <rect key="frame" x="36.5" y="0.0" width="145" height="30"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Site Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gnQ-Ci-22L">
+                                                <rect key="frame" x="29.5" y="0.0" width="152" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -204,9 +144,19 @@
                             <constraint firstAttribute="trailingMargin" secondItem="mis-Vu-5nP" secondAttribute="trailing" constant="50" id="sKh-c2-faf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="linkTextFieldWish" destination="gnQ-Ci-22L" id="2Zg-la-giX"/>
+                        <outlet property="nameTextFieldWish" destination="V0r-8x-V34" id="lDv-HC-kdF"/>
+                        <outlet property="photoImageViewWish" destination="mis-Vu-5nP" id="5RL-NR-hSt"/>
+                        <outlet property="priceTextFieldWish" destination="joQ-rg-zRm" id="rMC-wJ-Ljf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wde-f8-Jza" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="qRC-EZ-uvk"/>
+                <tapGestureRecognizer id="N9M-W1-Hyi">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibraryWish:" destination="06A-bE-yKT" id="i4v-rp-QVn"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-66.400000000000006" y="-152.47376311844079"/>
         </scene>

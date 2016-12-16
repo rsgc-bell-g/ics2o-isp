@@ -6,38 +6,49 @@
 import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
-// Mark: Properties
-   
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var mealNameLabel: UILabel!
-    @IBOutlet weak var photoImageView: UIImageView!
-   
+    
+    
+    // Mark: Properties
+    
+    @IBOutlet weak var siteTextFieldWish: UITextField!
+    @IBOutlet weak var priceTextFieldWish: UITextField!
+    @IBOutlet weak var photoImageViewWish: UIImageView!
+    @IBOutlet weak var nameTextFieldWish: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Handle the text field's user input through delegate callbacks
-        nameTextField.delegate = self
+        nameTextFieldWish.delegate = self
+        priceTextFieldWish.delegate = self
+        siteTextFieldWish.delegate = self
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-   
-// Mark: UITextFieldDelegate
-   
+    
+    
+    //MARK: Types
+    
+    struct PropertyKey {
+        static let name = "name"
+        static let photo = "photo"
+        static let rating = "rating"
+    }
+    
+    
+    // Mark: UITextFieldDelegate
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Hide the keyboard
         textField.resignFirstResponder()
         return true
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        mealNameLabel.text = textField.text
-    }
     
-// Mark: UIImagePickerControllerDelegate
-   
+    // Mark: UIImagePickerControllerDelegate
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController){
         // Dismiss the picker if the user canceled
         dismiss(animated: true, completion: nil)
@@ -49,16 +60,20 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         
         // Set photoImageView object to siplay the selected image
-        photoImageView.image = selectedImage
+        photoImageViewWish.image = selectedImage
         
         // Dismiss the picker
         dismiss(animated: true, completion: nil)
     }
     
-// Mark: Actions
-    @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
+    
+    // Mark: Actions
+    @IBAction func selectImageFromPhotoLibraryWish(_ sender: UITapGestureRecognizer) {
+        
         // Hide the keyboard
-        nameTextField.resignFirstResponder()
+        nameTextFieldWish.resignFirstResponder()
+        priceTextFieldWish.resignFirstResponder()
+        siteTextFieldWish.resignFirstResponder()
         
         // UIImagePickerController is a view controller that lets a user pick media from thier photo library
         let imagePickerController = UIImagePickerController()
@@ -72,10 +87,5 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         present(imagePickerController, animated: true, completion: nil)
     }
     
-
-    @IBAction func setDefaultLabelText(_ sender: Any) {
-        mealNameLabel.text = "Default Text"
-    }
-
 }
 

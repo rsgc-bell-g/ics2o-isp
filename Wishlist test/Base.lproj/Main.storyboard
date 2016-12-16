@@ -11,37 +11,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Page #1 / Title Screen-->
-        <scene sceneID="IZ8-yW-N76">
-            <objects>
-                <viewController id="GjB-6i-vIF" userLabel="Page #1 / Title Screen" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="7cR-Rm-aWg"/>
-                        <viewControllerLayoutGuide type="bottom" id="ipV-2M-74r"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1q8-cW-eNG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOF-Rr-ykX">
-                                <rect key="frame" x="102" y="298" width="172" height="72"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" title="Wishlist">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="KOF-Rr-ykX" firstAttribute="centerY" secondItem="1q8-cW-eNG" secondAttribute="centerY" id="PM5-sI-iuO"/>
-                            <constraint firstItem="KOF-Rr-ykX" firstAttribute="centerX" secondItem="1q8-cW-eNG" secondAttribute="centerX" id="R2E-w1-kSv"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cKa-IW-NsX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-862" y="-152"/>
-        </scene>
         <!--Page #2 / Create Wish-->
         <scene sceneID="Bz8-Kx-fPM">
             <objects>

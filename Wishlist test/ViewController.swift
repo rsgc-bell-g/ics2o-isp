@@ -10,7 +10,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     
     // Mark: Properties
     
-    @IBOutlet weak var siteTextFieldWish: UITextField!
+    @IBOutlet weak var linkTextFieldWish: UITextField!
     @IBOutlet weak var priceTextFieldWish: UITextField!
     @IBOutlet weak var photoImageViewWish: UIImageView!
     @IBOutlet weak var nameTextFieldWish: UITextField!
@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         // Handle the text field's user input through delegate callbacks
         nameTextFieldWish.delegate = self
         priceTextFieldWish.delegate = self
-        siteTextFieldWish.delegate = self
+        linkTextFieldWish.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,7 +34,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     struct PropertyKey {
         static let name = "name"
         static let photo = "photo"
-        static let rating = "rating"
+        static let link = "link"
+        static let price = "price"
     }
     
     
@@ -73,7 +74,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         // Hide the keyboard
         nameTextFieldWish.resignFirstResponder()
         priceTextFieldWish.resignFirstResponder()
-        siteTextFieldWish.resignFirstResponder()
+        linkTextFieldWish.resignFirstResponder()
         
         // UIImagePickerController is a view controller that lets a user pick media from thier photo library
         let imagePickerController = UIImagePickerController()

@@ -11,10 +11,41 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Page #2 / Create Wish-->
+        <!--Page #1 / Homepage-->
+        <scene sceneID="Xc7-2t-U1A">
+            <objects>
+                <viewController id="ivM-tg-ySO" userLabel="Page #1 / Homepage" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JYn-Vr-Fv1"/>
+                        <viewControllerLayoutGuide type="bottom" id="QNQ-kl-lU9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FYX-Pk-ALW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tyt-eM-ltv">
+                                <rect key="frame" x="102" y="298" width="172" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Wishlist">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tyt-eM-ltv" firstAttribute="centerX" secondItem="FYX-Pk-ALW" secondAttribute="centerX" id="P49-tc-Ijg"/>
+                            <constraint firstItem="Tyt-eM-ltv" firstAttribute="centerY" secondItem="FYX-Pk-ALW" secondAttribute="centerY" id="hTh-gl-ElG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0FH-R8-gGB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-988" y="-161"/>
+        </scene>
+        <!--Page #2 / Wish-->
         <scene sceneID="Bz8-Kx-fPM">
             <objects>
-                <viewController id="06A-bE-yKT" userLabel="Page #2 / Create Wish" customClass="ViewController" customModule="Wishlist_test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="06A-bE-yKT" userLabel="Page #2 / Wish" customClass="ViewController" customModule="Wishlist_test" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nl7-7V-XoB"/>
                         <viewControllerLayoutGuide type="bottom" id="4uT-eT-Dje"/>
@@ -41,10 +72,10 @@
                                 </connections>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aqM-ge-jHC" userLabel="Info stack">
-                                <rect key="frame" x="96.5" y="393" width="181.5" height="120"/>
+                                <rect key="frame" x="76.5" y="393" width="222.5" height="120"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NKd-c8-UES" userLabel="Enter name stack">
-                                        <rect key="frame" x="0.0" y="0.0" width="181.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="222.5" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZvT-Yg-pdt">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
@@ -53,7 +84,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V0r-8x-V34">
-                                                <rect key="frame" x="50" y="0.0" width="131.5" height="30"/>
+                                                <rect key="frame" x="50" y="0.0" width="172.5" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -61,7 +92,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w60-yw-QcC" userLabel="Enter price stack">
-                                        <rect key="frame" x="0.0" y="30" width="181.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="30" width="222.5" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8W-a1-GKR">
                                                 <rect key="frame" x="0.0" y="0.0" width="44" height="30"/>
@@ -70,7 +101,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Price Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="joQ-rg-zRm">
-                                                <rect key="frame" x="44" y="0.0" width="137.5" height="30"/>
+                                                <rect key="frame" x="44" y="0.0" width="178.5" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -78,7 +109,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bqm-GJ-UZe" userLabel="Enter link stack">
-                                        <rect key="frame" x="0.0" y="60" width="181.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="60" width="222.5" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Site" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLq-ju-brl">
                                                 <rect key="frame" x="0.0" y="0.0" width="29.5" height="30"/>
@@ -86,8 +117,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Site Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gnQ-Ci-22L">
-                                                <rect key="frame" x="29.5" y="0.0" width="152" height="30"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Site Homepage Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gnQ-Ci-22L">
+                                                <rect key="frame" x="29.5" y="0.0" width="193" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -95,7 +126,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZ3-ub-aQV">
-                                        <rect key="frame" x="0.0" y="90" width="181.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="90" width="222.5" height="30"/>
                                         <state key="normal" title="Save +"/>
                                     </button>
                                 </subviews>

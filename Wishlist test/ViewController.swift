@@ -8,12 +8,13 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
-    // Mark: Properties
+    // MARK: Properties
     
     @IBOutlet weak var linkTextFieldWish: UITextField!
     @IBOutlet weak var priceTextFieldWish: UITextField!
     @IBOutlet weak var photoImageViewWish: UIImageView!
     @IBOutlet weak var nameTextFieldWish: UITextField!
+    var wish = Wish(name: "", price: "", link: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,23 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidLayoutSubviews() {
+        
+        // Iterate over all subviews of the main interface
+        // For any that are text fields, make it so that when editing ends, the class list is saved
+        // This works by invoking the saveClassList function
+        nameTextFieldWish.addTarget(self, action: #selector(self.saveWish), for: .editingChanged)
+        priceTextFieldWish.addTarget(self, action: #selector(self.saveWish), for: .editingChanged)
+        linkTextFieldWish.addTarget(self, action: #selector(self.saveWish), for: .editingChanged)
+        
+        // Try to load the wish from disk
+        if let savedWish = loadWish() {
+            linkTextFieldWish.text = savedWish.link
+            priceTextFieldWish.text = savedWish.price
+            nameTextFieldWish.text = savedWish.name
+        }
+    }
+    
     
     //MARK: Types
     
@@ -39,7 +57,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     }
     
     
-    // Mark: UITextFieldDelegate
+    // MARK: UITextFieldDelegate
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Hide the keyboard
@@ -48,7 +66,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     }
     
     
-    // Mark: UIImagePickerControllerDelegate
+    // MARK: UIImagePickerControllerDelegate
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController){
         // Dismiss the picker if the user canceled
@@ -68,7 +86,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     }
     
     
-    // Mark: Actions
+    // MARK: Actions
     @IBAction func selectImageFromPhotoLibraryWish(_ sender: UITapGestureRecognizer) {
         
         // Hide the keyboard
@@ -87,6 +105,33 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         
         present(imagePickerController, animated: true, completion: nil)
     }
+    
+    // MARK: NSCoder
+    
+    // Try to load wish
+    func loadWish() -> Wish? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Wish.ArchiveURL.path) as? Wish
+    }
+    
+    // Save Wish
+    func saveWish() {
+        if let link = linkTextFieldWish.text {
+            wish.link = link
+        }
+        if let price = priceTextFieldWish.text {
+            wish.price = price
+        }
+        if let name = nameTextFieldWish.text {
+            wish.name = name
+        }
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(wish, toFile: Wish.ArchiveURL.path)
+        
+        // Log an error if this didn't work
+        if isSuccessfulSave == false {
+            print("Failed to save wish...")
+        }
+    }
+
     
 }
 

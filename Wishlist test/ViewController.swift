@@ -14,7 +14,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     @IBOutlet weak var priceTextFieldWish: UITextField!
     @IBOutlet weak var photoImageViewWish: UIImageView!
     @IBOutlet weak var nameTextFieldWish: UITextField!
-    var wish = Wish(name: "", price: "", link: "")
+    
+    var wish = Wish(name: "", price: "", link: "", photo: #imageLiteral(resourceName: "default photo"))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
             linkTextFieldWish.text = savedWish.link
             priceTextFieldWish.text = savedWish.price
             nameTextFieldWish.text = savedWish.name
+            photoImageViewWish.image = savedWish.photo
         }
     }
     
@@ -124,6 +126,11 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         if let name = nameTextFieldWish.text {
             wish.name = name
         }
+        if let photo = photoImageViewWish.image {
+            wish.photo = photo
+        }
+        
+        
         let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(wish, toFile: Wish.ArchiveURL.path)
         
         // Log an error if this didn't work
@@ -131,7 +138,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
             print("Failed to save wish...")
         }
     }
-
+    
     
 }
 

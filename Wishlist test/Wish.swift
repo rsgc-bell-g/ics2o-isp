@@ -14,6 +14,7 @@ class Wish : NSObject, NSCoding {
     var name : String
     var price : String
     var link : String
+    var photo : UIImage?
     
     // MARK: Paths for archiving data across sessions
     static let DocumentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
@@ -24,18 +25,18 @@ class Wish : NSObject, NSCoding {
         static let nameKey = "name"
         static let priceKey = "price"
         static let linkKey = "link"
+        static let photoKey = "photo"
     }
     
-    init(name : String, price : String, link: String) {
+    init(name : String, price : String, link: String, photo: UIImage?) {
         
         // Initialize stored properties
         self.name = name
         self.price = price
         self.link = link
-        
-        // Run the initializer on the superclass
-        super.init()
-        
+        if let photo = photo {
+            self.photo = photo
+        }
     }
     
     // MARK: NSCoding required functions
@@ -45,6 +46,7 @@ class Wish : NSObject, NSCoding {
         aCoder.encode(name, forKey: PropertyKey.nameKey)
         aCoder.encode(price, forKey: PropertyKey.priceKey)
         aCoder.encode(link, forKey: PropertyKey.linkKey)
+        aCoder.encode(photo, forKey: PropertyKey.photoKey)
     }
     
     // This allows the Meal class to load values from the file
@@ -59,9 +61,12 @@ class Wish : NSObject, NSCoding {
         // Load the link
         let link = aDecoder.decodeObject(forKey: PropertyKey.linkKey) as! String
         
+        // Load the photo
+        let photo = aDecoder.decodeObject(forKey: PropertyKey.photoKey) as! UIImage?
+        
         
         // Now call the designated (main) initializer for this class
-        self.init(name: name, price: price, link: link)
+        self.init(name: name, price: price, link: link, photo: photo)
         
     }
     

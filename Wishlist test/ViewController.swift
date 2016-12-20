@@ -23,6 +23,15 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         nameTextFieldWish.delegate = self
         priceTextFieldWish.delegate = self
         linkTextFieldWish.delegate = self
+        
+        // Try to load the wish from disk
+        if let savedWish = loadWish() {
+            linkTextFieldWish.text = savedWish.link
+            priceTextFieldWish.text = savedWish.price
+            nameTextFieldWish.text = savedWish.name
+            photoImageViewWish.image = savedWish.photo
+        }
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -39,13 +48,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         priceTextFieldWish.addTarget(self, action: #selector(self.saveWish), for: .editingChanged)
         linkTextFieldWish.addTarget(self, action: #selector(self.saveWish), for: .editingChanged)
         
-        // Try to load the wish from disk
-        if let savedWish = loadWish() {
-            linkTextFieldWish.text = savedWish.link
-            priceTextFieldWish.text = savedWish.price
-            nameTextFieldWish.text = savedWish.name
-            photoImageViewWish.image = savedWish.photo
-        }
     }
     
     
@@ -85,6 +87,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         
         // Dismiss the picker
         dismiss(animated: true, completion: nil)
+        
+        // Call save image
+        saveWish()
     }
     
     

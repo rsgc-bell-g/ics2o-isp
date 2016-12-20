@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Wishlist test
+//  Wishlist
 //
 //  Created by Gavin Bell on 2016-11-16.
 //  Copyright © 2016 Gavin Bell. All rights reserved.

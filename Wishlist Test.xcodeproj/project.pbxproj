@@ -16,7 +16,7 @@
 
 /* Begin PBXFileReference section */
 		3F5669901E0465F400662EF4 /* Wish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wish.swift; sourceTree = "<group>"; };
-		3FDD35791DDCAA0E00C3276B /* Wishlist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wishlist.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FDD35791DDCAA0E00C3276B /* Wishlist test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wishlist test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FDD357C1DDCAA0E00C3276B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FDD357E1DDCAA0E00C3276B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3FDD35811DDCAA0E00C3276B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		3FDD357A1DDCAA0E00C3276B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3FDD35791DDCAA0E00C3276B /* Wishlist.app */,
+				3FDD35791DDCAA0E00C3276B /* Wishlist test.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,9 +67,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3FDD35781DDCAA0E00C3276B /* Wishlist */ = {
+		3FDD35781DDCAA0E00C3276B /* Wishlist test */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3FDD358B1DDCAA0E00C3276B /* Build configuration list for PBXNativeTarget "Wishlist" */;
+			buildConfigurationList = 3FDD358B1DDCAA0E00C3276B /* Build configuration list for PBXNativeTarget "Wishlist test" */;
 			buildPhases = (
 				3FDD35751DDCAA0E00C3276B /* Sources */,
 				3FDD35761DDCAA0E00C3276B /* Frameworks */,
@@ -79,9 +79,9 @@
 			);
 			dependencies = (
 			);
-			name = Wishlist;
+			name = "Wishlist test";
 			productName = "Wishlist test";
-			productReference = 3FDD35791DDCAA0E00C3276B /* Wishlist.app */;
+			productReference = 3FDD35791DDCAA0E00C3276B /* Wishlist test.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -100,7 +100,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3FDD35741DDCAA0E00C3276B /* Build configuration list for PBXProject "Wishlist" */;
+			buildConfigurationList = 3FDD35741DDCAA0E00C3276B /* Build configuration list for PBXProject "Wishlist test" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -113,7 +113,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3FDD35781DDCAA0E00C3276B /* Wishlist */,
+				3FDD35781DDCAA0E00C3276B /* Wishlist test */,
 			);
 		};
 /* End PBXProject section */
@@ -275,7 +275,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3FDD35741DDCAA0E00C3276B /* Build configuration list for PBXProject "Wishlist" */ = {
+		3FDD35741DDCAA0E00C3276B /* Build configuration list for PBXProject "Wishlist test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3FDD35891DDCAA0E00C3276B /* Debug */,
@@ -284,7 +284,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3FDD358B1DDCAA0E00C3276B /* Build configuration list for PBXNativeTarget "Wishlist" */ = {
+		3FDD358B1DDCAA0E00C3276B /* Build configuration list for PBXNativeTarget "Wishlist test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3FDD358C1DDCAA0E00C3276B /* Debug */,

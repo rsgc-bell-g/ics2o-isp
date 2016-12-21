@@ -38,7 +38,7 @@
 		3FDD35701DDCAA0E00C3276B = {
 			isa = PBXGroup;
 			children = (
-				3FDD357B1DDCAA0E00C3276B /* Wishlist */,
+				3FDD357B1DDCAA0E00C3276B /* Wishlist test */,
 				3FDD357A1DDCAA0E00C3276B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,7 +51,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3FDD357B1DDCAA0E00C3276B /* Wishlist */ = {
+		3FDD357B1DDCAA0E00C3276B /* Wishlist test */ = {
 			isa = PBXGroup;
 			children = (
 				3FDD357C1DDCAA0E00C3276B /* AppDelegate.swift */,
@@ -61,7 +61,6 @@
 				3FDD35881DDCAA0E00C3276B /* Info.plist */,
 				3F5669901E0465F400662EF4 /* Wish.swift */,
 			);
-			name = Wishlist;
 			path = "Wishlist test";
 			sourceTree = "<group>";
 		};
